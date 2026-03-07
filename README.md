@@ -17,6 +17,14 @@ Works Fully Offline
 Optional .exe structural distribution for Windows
 
 
+---Installation---
+
+Python 3.10 or newer
+
+
+pip package manager
+
+
 
 
 ---Directory---
