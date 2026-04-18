@@ -39,6 +39,7 @@ ui.py
 requirements.txt
 README.md
 ```
+
 ## 🛠️ Prerequisites
 
 Before installing or running this project, make sure you have the following installed on your machine:
@@ -85,7 +86,31 @@ git clone https://github.com/MartinV4520/CIS-260-Project
 
 ---
 
-### **3️⃣ Create a Virtual Environment (Recommended)**
+### ⭐ **3️⃣ Navigate Into the Project Folder — REQUIRED**
+Before installing dependencies, you **must** change your terminal directory to the project folder.
+
+If you skip this step, the dependencies will NOT install.
+
+```
+cd CIS-260-Project
+```
+
+You can verify you're in the correct folder by running:
+
+```
+dir
+```
+
+You should see:
+- requirements.txt  
+- ui.py  
+- classify_url.py  
+- /models  
+- /scripts  
+
+---
+
+### **4️⃣ Create a Virtual Environment (Recommended)**
 ```
 python -m venv venv
 ```
@@ -104,14 +129,14 @@ source venv/bin/activate
 
 ---
 
-### **4️⃣ Install Dependencies**
+### **5️⃣ Install Dependencies**
 ```
 pip install -r requirements.txt
 ```
 
 ---
 
-### **5️⃣ Train the Model (Required Before Use)**
+### **6️⃣ Train the Model (Required Before Use)**
 This generates `best_model.joblib` inside the `models/` folder.
 
 ```
@@ -204,3 +229,4 @@ Run it anytime you want to retrain the model:
 ```
 python train_model.py
 ```
+
