@@ -39,6 +39,30 @@ ui.py
 requirements.txt
 README.md
 ```
+## 🛠️ Prerequisites
+
+Before installing or running this project, make sure you have the following installed on your machine:
+
+### ✔️ Python 3.10+
+Download from: https://www.python.org/downloads/
+
+You can verify your version with:
+```
+python --version
+```
+
+### ✔️ Git (required to clone the repository)
+Download Git here:  
+https://git-scm.com/downloads
+
+During installation, make sure to select:
+- **“Add Git to PATH”**  
+- **Use bundled OpenSSL library** (recommended)
+
+You can verify Git is installed with:
+```
+git --version
+```
 
 ---
 
