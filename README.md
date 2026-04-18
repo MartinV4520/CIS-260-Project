@@ -1,23 +1,209 @@
-## Overview 
+# 🌐 **Phishing Link Detector**
+*A machine‑learning powered tool for detecting phishing URLs with both CLI and UI options.*
 
-A Python tool that analyszes URL's and determines whether they are legitimate, suspicious , or potentially malicious. It uses URL feature extraction and heuristic rules to identify common phising patterns such as deceptive domains, excessive sudomains, obfuscation, and known attack indicators. The purpose of this python tool is to help assist students, security beginners, and anyone who needs a simple offline phishing detection tool. Phishing attacks prove to consistently be throned as the most common manner of attack. Many phishing attempts rely on malicious URLs designed to trick users into entering credentials or downloading malware and this tool aims to resolve such.
+---
 
-## Features 
+## 🔎 **Overview**
+The **Phishing Link Detector** analyzes URLs and determines whether they are **legitimate**, **suspicious**, or **malicious**. It uses:
 
-This detector is a multi-tool of several capabilities that make it both a learning tool and a practical security aid. The tool utilizes structural analysis of URL's by inspecting domain depth, subdomain usage, and overall length, which helps identify malicious intent behind the structures more efficiently. Additionally, the tool can detect the use of IP addresses in place of domain names and it can flag URLs that contain unusual or uncommon characters. Furthermore, the tool searches for deceptive or high-risk keywords that frequently present themselves in phishing links, including terms related to account verification, security updates, and login prompts. The combination of the analysis of the link, the tool will utilize heuristic rules to produce a rating of classification from safe, suspicious, or high-risk. 
+- URL feature extraction  
+- A trained **Random Forest** machine learning model  
+- Heuristic rules  
+- A user‑friendly optional **graphical interface (UI)**  
 
-## Installation
+Phishing attacks are one of the most common cybersecurity threats. This tool helps users, students, and developers quickly evaluate URLs and understand why they may be dangerous.
 
-To use this Phishing Link Detector you'll need a working Python environment that is on the version 3.10 or above. Additionally, there is a requirements.txt file to ensure all the necessary Python dependencies can be installed easily and consistently. Once inside the project directory, the required libraries can be installed by running a pip command that be referenced in the requirements.txt file. This gurantees that all required modules needed for URL parsing, feature extraction, and otional machine-lerarning functionally are avaliable before the program is executed. After these steps have been followed, the tool is fully ready to run on any compatiable system!
+---
 
-Additionally, if you may want to convert this tool into a .exe instead, you can utilize the PyInstaller to package it.
-## How Does it Work?
+## 🚀 **Features**
+- ✔️ Extracts over a dozen URL‑based features  
+- ✔️ Detects suspicious patterns (IP addresses, long URLs, deceptive keywords, etc.)  
+- ✔️ Machine learning classification using Random Forest  
+- ✔️ Confidence score for each prediction  
+- ✔️ **Two ways to use the tool:**  
+  - Command‑line mode  
+  - Graphical UI mode (Tkinter)  
+- ✔️ Easy installation with `requirements.txt`
 
-The detector operates by extracting meaningful features from a URL and applying a set of heuristic rules that reflect well-documented phishing behaviors. It evaluates the depth of the domain, checks for excessive subdomain, identifies the presence of IP-based URLs, and looks for unusual or obfuscated characters that attackers often use to disguise malicious links. The program also searches for deceptive keywords that mimic legitimate services, such as misspelled brand names or terms like "verify,", "secure," or "update," which frequently appear in phishing attempts. A probability score is then produced by  and given to the user depending on the individual factors of probabilty given from such details. 
+---
 
-## Directory
+## 📁 **Project Structure**
+```
+/models
+    best_model.joblib
+/scripts
+    train_model.py
+    classify_url.py
+phishing_features.py
+ui.py
+requirements.txt
+README.md
+```
 
-phishing-detector/
+---
+
+# 🛠️ **Installation Guide (Detailed)**
+
+### **1️⃣ Install Python**
+Make sure you have **Python 3.10+** installed.
+
+Check your version:
+```
+python --version
+```
+
+---
+
+### **2️⃣ Clone the Repository**
+```
+git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
+cd YOUR_REPO_NAME
+```
+
+---
+
+### **3️⃣ Create a Virtual Environment (Recommended)**
+```
+python -m venv venv
+```
+
+Activate it:
+
+**Windows**
+```
+venv\Scripts\activate
+```
+
+**Mac/Linux**
+```
+source venv/bin/activate
+```
+
+---
+
+### **4️⃣ Install Dependencies**
+```
+pip install -r requirements.txt
+```
+
+---
+
+### **5️⃣ Train the Model (Required Before Use)**
+This generates `best_model.joblib` inside the `models/` folder.
+
+```
+python train_model.py
+```
+
+---
+
+# 🧭 **How to Use the Tool**
+
+You now have **two options**:
+
+---
+
+# 🖥️ **Option 1 — Use the Graphical UI (Recommended for Beginners)**
+
+### **Run the UI**
+```
+python ui.py
+```
+
+### **What the UI Does**
+- Opens a window  
+- Lets you type or paste a URL  
+- Runs the trained model  
+- Shows:
+  - ✔️ Prediction (Phishing or Legitimate)  
+  - ✔️ Confidence score  
+  - ✔️ Model used  
+
+### **Perfect for:**
+- Non‑technical users  
+- Demonstrations  
+- Class presentations  
+
+---
+
+# 💻 **Option 2 — Use the Command Line (Advanced Users)**
+
+### **Run the Classifier**
+```
+python classify_url.py
+```
+
+If your script asks for input, enter a URL when prompted.
+
+### **What You Get**
+- Raw prediction (0 = legitimate, 1 = phishing)  
+- Confidence score  
+- Model name  
+
+### **Perfect for:**
+- Developers  
+- Automation  
+- Integrating into other tools  
+
+---
+
+# 📊 **How It Works (Technical Summary)**
+
+The detector analyzes URLs by extracting features such as:
+
+- URL length  
+- Number of dots  
+- Presence of IP addresses  
+- Suspicious keywords  
+- Subdomain depth  
+- Special characters  
+- Domain structure  
+
+These features are fed into a **Random Forest classifier**, which outputs:
+
+- **Prediction** (phishing or legitimate)  
+- **Confidence score**  
+- **Model type**  
+
+---
+
+# 🧪 **Training the Model**
+The training script:
+
+- Loads the dataset  
+- Extracts features  
+- Splits into train/test  
+- Trains a Random Forest  
+- Evaluates accuracy, precision, recall, and F1  
+- Saves the best model to `/models/best_model.joblib`
+
+Run it anytime you want to retrain the model:
+```
+python train_model.py
+```
+
+---
+
+# 📸 **Screenshots (Optional Section)**
+You can add:
+
+- UI screenshot  
+- Classification script screenshot  
+- Model training output  
+
+This makes your repo look even more polished.
+
+---
+
+# 📄 **License**
+MIT License (or whichever you choose)
+
+---
+
+# 🎉 **Final Notes**
+This project is designed for learning, cybersecurity awareness, and practical phishing detection.  
+Feel free to fork, modify, and expand it.
+
 
 │
 
