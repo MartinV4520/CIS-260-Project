@@ -66,7 +66,7 @@ git --version
 
 ---
 
-# 🛠️ **Installation Guide 
+# 🛠️ **Installation Guide**
 
 ### **1️⃣ Install Python**
 Make sure you have **Python 3.10+** installed.
