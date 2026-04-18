@@ -42,7 +42,7 @@ README.md
 
 ---
 
-# 🛠️ **Installation Guide (Detailed)**
+# 🛠️ **Installation Guide 
 
 ### **1️⃣ Install Python**
 Make sure you have **Python 3.10+** installed.
@@ -103,7 +103,7 @@ You now have **two options**:
 
 ---
 
-# 🖥️ **Option 1 — Use the Graphical UI (Recommended for Beginners)**
+# 🖥️ **Option 1 — Use the Graphical UI (For Beginners)**
 
 ### **Run the UI**
 ```
@@ -126,7 +126,7 @@ python ui.py
 
 ---
 
-# 💻 **Option 2 — Use the Command Line (Advanced Users)**
+# 💻 **Option 2 — Use the Command Line (For Advanced Users)**
 
 ### **Run the Classifier**
 ```
@@ -147,7 +147,7 @@ If your script asks for input, enter a URL when prompted.
 
 ---
 
-# 📊 **How It Works (Technical Summary)**
+# 📊 **How It Works**
 
 The detector analyzes URLs by extracting features such as:
 
@@ -181,63 +181,3 @@ Run it anytime you want to retrain the model:
 ```
 python train_model.py
 ```
-
----
-
-# 📸 **Screenshots (Optional Section)**
-You can add:
-
-- UI screenshot  
-- Classification script screenshot  
-- Model training output  
-
-This makes your repo look even more polished.
-
----
-
-# 📄 **License**
-MIT License (or whichever you choose)
-
----
-
-# 🎉 **Final Notes**
-This project is designed for learning, cybersecurity awareness, and practical phishing detection.  
-Feel free to fork, modify, and expand it.
-
-
-│
-
-├── main.py                 # Entry point
-
-
-├── detector/
-
-
-│   ├── analyzer.py         # Core detection logic
-
-
-│   ├── features.py         # URL feature extraction
-
-
-│   └── rules.py            # Heuristic rules
-
-
-├── model/
-
-
-│   └── trained_model.pkl   # Optional ML model
-
-
-├── utils/
-
-
-│   └── helpers.py          # Utility functions
-
-
-├── tests/                  # Test cases
-
-
-├── requirements.txt        # Dependencies
-
-
-└── README.md               # Documentation
